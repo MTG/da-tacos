@@ -2,7 +2,7 @@
 
 We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely the benchmark subset and the cover analysis subset, with pre-extracted features and metadata for 15,000 and 10,000 songs, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
 
-For organizing the data, we use the structure of SecondHandSongs where each song is called a 'performance', and each clique (cover group) is called a 'work'. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22.h5`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_15`).
+For organizing the data, we use the structure of SecondHandSongs where each song is called a 'performance', and each clique (cover group) is called a 'work'. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_15`).
 
 Metadata for each song includes performance title, performance artist, work title, work artist, release year, SecondHandSongs.com performance ID, SecondHandSongs.com work ID, and whether the song is instrumental or not. In addition, we matched the original metadata with MusicBrainz to obtain MusicBrainz ID (MBID), song length and genre/style tags. We would like to note that MusicBrainz related information is not available for all the songs in Da-TACOS.
 
@@ -117,7 +117,7 @@ To facilitate the use of the dataset, we provide two options regarding the file 
 ```bash
 python -m venv venv
 source venv/bin/activate
-pip install -r scripts/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Downloading the data
@@ -129,7 +129,7 @@ python download_da-tacos.py -h
 ```
 ```
 usage: download_da-tacos.py [-h]
-                   		    [--dataset {benchmark,coveranalysis,da-tacos}]                                                                          
+                            [--dataset {benchmark,coveranalysis,da-tacos}]                                                                          
                             [--type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags}]                                                            
                             [--outputdir OUTPUTDIR] 
                             [--unpack]
@@ -169,7 +169,7 @@ P_22_data = dd.io.load(file_path)
 
 Please consider citing the following publication when using the dataset:
 
-> Yesiler F., Tralie C., Correya A., Silva D. F., Tovstogan P., Gomez E., Serra X. (2019). [Da-TACOS: A Dataset for Cover Song Identification and Understanding](). Proceedings of 20th International Society for Music Information Retrieval Conference (ISMIR 2019) (In print).
+> Furkan Yesiler, Chris Tralie, Albin Correya, Diego F. Silva, Philip Tovstogan, Emilia Gómez, and Xavier Serra. Da-TACOS: A Dataset for Cover Song Identification and Understanding. In 20th International Society for Music Information Retrieval Conference (ISMIR 2019), Delft, The Netherlands, 2019 (In print).
 
 ## License
 
