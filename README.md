@@ -64,7 +64,7 @@ The python dictionary obtained with the code above will have the respective WIDs
 
 ### Pre-extracted features
 
-The list of features included in Da-TACOS can be seen in [Figure 1].
+The list of features included in Da-TACOS can be seen below. All the features are extracted using [acoss](https://github.com/furkanyesiler/acoss/blob/master/acoss/features.py) repository.
 
 To facilitate the use of the dataset, we provide two options regarding the file structure.
 
