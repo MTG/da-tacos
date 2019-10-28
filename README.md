@@ -1,6 +1,6 @@
 # Da-TACOS
 
-We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely the benchmark subset and the cover analysis subset, with pre-extracted features and metadata for 15,000 and 10,000 songs, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
+We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
 
 For organizing the data, we use the structure of SecondHandSongs where each song is called a 'performance', and each clique (cover group) is called a 'work'. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_14`).
 
@@ -21,7 +21,7 @@ An example to load the metadata files in python:
 ```python
 import json
 
-with open('./metadata/da-tacos_benchmark_subset_metadata.json') as f:
+with open('./da-tacos_metadata/da-tacos_benchmark_subset_metadata.json') as f:
 	benchmark_metadata = json.load(f)
 ```
 
@@ -64,7 +64,7 @@ The python dictionary obtained with the code above will have the respective WIDs
 
 ### Pre-extracted features
 
-The list of features included in Da-TACOS can be seen below. All the features are extracted using [acoss](https://github.com/furkanyesiler/acoss/blob/master/acoss/features.py) repository.
+The list of features included in Da-TACOS can be seen below. All the features are extracted with [acoss](https://github.com/furkanyesiler/acoss/blob/master/acoss/features.py) repository that uses open-source feature extraction libraries such as [Essentia](https://essentia.upf.edu/documentation/), [LibROSA](https://librosa.github.io/librosa/), and [Madmom](https://github.com/CPJKU/madmom).
 
 To facilitate the use of the dataset, we provide two options regarding the file structure.
 
@@ -122,7 +122,7 @@ pip install -r requirements.txt
 
 ### Downloading the data
 
-The dataset is stored in Zenodo and can be downloaded in this [webpage]. We also provide a python script that automatically downloads the folder you specify. Basic usage of this script can be seen below:
+The dataset is stored in Zenodo and Google Drive, and can be downloaded from this [link](). We also provide a python script that automatically downloads the folder you specify. Basic usage of this script can be seen below:
 
 ```bash
 python download_da-tacos.py -h
@@ -179,7 +179,7 @@ Please cite the following publication when using the dataset:
 
 ## License
 
-* The code in this repository is licensed under [Apache 2.0](LICENSE) 
+* The code in this repository is licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) 
 * The metadata and the pre-extracted features are licensed under a [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Acknowledgments
