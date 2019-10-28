@@ -2,7 +2,7 @@
 
 We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely the benchmark subset and the cover analysis subset, with pre-extracted features and metadata for 15,000 and 10,000 songs, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
 
-For organizing the data, we use the structure of SecondHandSongs where each song is called a 'performance', and each clique (cover group) is called a 'work'. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_15`).
+For organizing the data, we use the structure of SecondHandSongs where each song is called a 'performance', and each clique (cover group) is called a 'work'. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_14`).
 
 Metadata for each song includes performance title, performance artist, work title, work artist, release year, SecondHandSongs.com performance ID, SecondHandSongs.com work ID, and whether the song is instrumental or not. In addition, we matched the original metadata with MusicBrainz to obtain MusicBrainz ID (MBID), song length and genre/style tags. We would like to note that MusicBrainz related information is not available for all the songs in Da-TACOS.
 
@@ -77,7 +77,7 @@ To facilitate the use of the dataset, we provide two options regarding the file 
 	"hpcp": numpy.ndarray,
 	"key_extractor": {
 		"key": numpy.str_,
-		"scale": numpy.str,_
+		"scale": numpy.str_,_
 		"strength": numpy.float64
 	},
 	"madmom_features": {
@@ -87,7 +87,7 @@ To facilitate the use of the dataset, we provide two options regarding the file 
 		"tempos": numpy.ndarray
 	}
 	"mfcc_htk": numpy.ndarray,
-	"tags": list of (numpy.str,_numpy.str)
+	"tags": list of (numpy.str_, numpy.str_)
 	"label": numpy.str_,
 	"track_id": numpy.str_
 }
@@ -130,8 +130,9 @@ python download_da-tacos.py -h
 ```
 usage: download_da-tacos.py [-h]
                             [--dataset {benchmark,coveranalysis,da-tacos}]                                                                          
-                            [--type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags}]                                                            
-                            [--outputdir OUTPUTDIR] 
+                            [--type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags}]   
+                            [--source {gdrive,zenodo}]                                                         
+                            [--outputdir OUTPUTDIR]
                             [--unpack]
                             [--remove]
 
@@ -139,15 +140,20 @@ Download script for Da-TACOS
 
 optional arguments:                                                                                                       
   -h, --help            show this help message and exit                                                                   
-  --dataset {benchmark,coveranalysis,da-tacos}                                                                      
-                        which subsets to download. 'da-tacos' option downloads                                                                  
-                        both subsets. metadata will be downloaded with all the                           
-                        options. (default: benchmark)                                                                     
+  --dataset {metadata,benchmark,coveranalysis,da-tacos}                                                                      
+                        which subsets to download. 'da-tacos' option downloads
+                        both subsets. the options other than 'metadata' will
+                        download the metadata as well. (default: metadata)                                                                     
   --type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags}                                                      
-                        which folder to download. for the options other than                                      
-                        'single_files', you can enter a list (e.g. ['cens',                                     
-                        'crema']). for detailed explanation, please check                                                                       https://github.com/furkanyesiler/da-tacos (default:                                                                     single_files)                                     
-                        (default: single_files)                                                                
+                        which folder to download. for the options other than
+                        'single_files', you can enter a list (e.g. ['cens',
+                        'crema']). for detailed explanation, please check
+                        https://github.com/MTG/da-tacos (default:
+                        single_files)                  
+  --source {gdrive,zenodo}
+                        from which source to download the files. you can
+                        either download from Google Drive (gdrive) or from
+                        Zenodo (zenodo) (default: gdrive)                                           
   --outputdir OUTPUTDIR                                                               
                         directory to store the dataset (default: ./)                   
   --unpack              unpack the zip files (default: False)                        
@@ -161,8 +167,8 @@ All files (except the metadata) are stored in `.h5` format. You must have `deepd
 ```python
 import deepdish as dd
 
-file_path = './da-tacos_coveranalysis_subset_single_files/W_22/P_22.h5'
-P_22_data = dd.io.load(file_path)
+file_path = './da-tacos_coveranalysis_subset_single_files/W_14/P_15.h5'
+P_15_data = dd.io.load(file_path)
 ```
 
 ## Citing the dataset
@@ -178,8 +184,8 @@ Please cite the following publication when using the dataset:
 
 ## Acknowledgments
 
-This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 765068 (MIP-Frontiers).
+This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 765068 (MIP-Frontiers).
 
-This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 770376 (Trompa).
+This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 770376 (TROMPA).
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" height="64" hspace="20">
