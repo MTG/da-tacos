@@ -119,4 +119,7 @@ if __name__ == '__main__':
     if args.source == 'zenodo':
         raise Exception('Currently, we only support downloads from Google Drive.')
 
+    if not os.path.exists(args.outputdir):
+        raise Exception('The specified directory for storing the dataset does not exist.')
+
     download(args.dataset, args.type, args.source, args.outputdir, args.unpack, args.remove)
