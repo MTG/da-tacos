@@ -211,3 +211,5 @@ This work has received funding from the European Union's Horizon 2020 research a
 This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 770376 (TROMPA).
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" height="64" hspace="20">
+
+Our logo uses svg vectors from https://www.svgrepo.com/.
