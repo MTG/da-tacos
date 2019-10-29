@@ -187,14 +187,14 @@ Please cite the following publication when using the dataset:
 
 Bibtex version:
 
-```bib
+```
 @inproceedings{yesiler2019,
-    author = {Furkan Yesiler and Chris Tralie and Albin Correya and Diego F. Silva and Philip Tovstogan and Emilia G{\'{o}}mez and Xavier Serra},
-    title = {{Da-TACOS}: A Dataset for Cover Song Identification and Understanding},
-    booktitle = {Proc. of the 20th Int. Soc. for Music Information Retrieval Conf. (ISMIR 2019)},
-    year = {2019},
-    pages = {327--334},
-    address={Delft, The Netherlands}
+    author = "Furkan Yesiler and Chris Tralie and Albin Correya and Diego F. Silva and Philip Tovstogan and Emilia G{\'{o}}mez and Xavier Serra",
+    title = "{Da-TACOS}: A Dataset for Cover Song Identification and Understanding",
+    booktitle = "Proc. of the 20th Int. Soc. for Music Information Retrieval Conf. (ISMIR 2019)",
+    year = "2019",
+    pages = "327--334",
+    address = "Delft, The Netherlands"
 }
 ```
 
