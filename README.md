@@ -1,4 +1,4 @@
-# Da-TACOS
+![Da-TACOS](https://user-images.githubusercontent.com/32430027/67803708-e7ee5600-fa8d-11e9-8c63-5eeaea83e57a.png)
 
 We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
 
