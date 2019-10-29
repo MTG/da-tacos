@@ -13,9 +13,10 @@ Metadata for each song includes
 * SecondHandSongs.com performance ID, 
 * SecondHandSongs.com work ID,  
 * whether the song is instrumental or not. 
+
 In addition, we matched the original metadata with MusicBrainz to obtain MusicBrainz ID (MBID), song length and genre/style tags. We would like to note that MusicBrainz related information is not available for all the songs in Da-TACOS.
 
-For facilitating **reproducibility** in cover song identification (CSI) research, we propose **two frameworks** for **feature extraction** and **benchmarking** in our supplementary repository: **[acoss]**(https://github.com/furkanyesiler/acoss). **The feature extraction framework** is designed to help CSI researchers to find **the most commonly used features for CSI in a single address**. The parameter values we used to extract the features in Da-TACOS are shared in the same repository. Moreover, **the benchmarking framework** includes our implementations of **7 state-of-the-art CSI systems**. We provide the performance results of **an initial benchmarking** of those **7 systems** on the benchmark subset of Da-TACOS. We encourage other CSI researchers to contribute to the open source frameworks with implementing their favorite feature extraction algorithms and their CSI systems to build up a knowledge base where CSI research can reach larger audiences.
+For facilitating **reproducibility** in cover song identification (CSI) research, we propose **two frameworks** for **feature extraction** and **benchmarking** in our supplementary repository: [acoss](https://github.com/furkanyesiler/acoss). **The feature extraction framework** is designed to help CSI researchers to find **the most commonly used features for CSI in a single address**. The parameter values we used to extract the features in Da-TACOS are shared in the same repository. Moreover, **the benchmarking framework** includes our implementations of **7 state-of-the-art CSI systems**. We provide the performance results of **an initial benchmarking** of those **7 systems** on the benchmark subset of Da-TACOS. We encourage other CSI researchers to contribute to the open source frameworks with implementing their favorite feature extraction algorithms and their CSI systems to build up a knowledge base where CSI research can reach larger audiences.
 
 The instructions for how to download and to use the dataset are shared below. Please contact us if you have any questions or requests.
 
@@ -152,11 +153,11 @@ optional arguments:
                         which subsets to download. 'da-tacos' option downloads
                         both subsets. the options other than 'metadata' will
                         download the metadata as well. (default: metadata)                                                                     
-  --type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags}                                                      
-                        which folder to download. for the options other than
-                        'single_files', you can enter a list (e.g. ['cens',
-                        'crema']). for detailed explanation, please check
-                        https://github.com/MTG/da-tacos (default:
+  --type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags} [{single_files,cens,crema,hpcp,key,madmom,mfcc,tags} ...]                                     
+                        which folder to download. for downloading multiple
+                        folders, you can enter multiple arguments (e.g. '--
+                        type cens crema'). for detailed explanation, please
+                        check https://mtg.github.io/da-tacos/ (default:
                         single_files)                  
   --source {gdrive,zenodo}
                         from which source to download the files. you can
