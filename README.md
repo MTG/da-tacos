@@ -1,4 +1,4 @@
-# Da-TACOS
+<img src="https://user-images.githubusercontent.com/32430027/67803708-e7ee5600-fa8d-11e9-8c63-5eeaea83e57a.png" alt="Da-TACOS" width="150"/>
 
 We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com). All audio files are encoded in MP3 format and their sample rate is 44.1 kHz. 
 
@@ -211,3 +211,5 @@ This work has received funding from the European Union's Horizon 2020 research a
 This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 770376 (TROMPA).
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" height="64" hspace="20">
+
+Our logo uses svg vectors from https://www.svgrepo.com/.
