@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/32430027/67803708-e7ee5600-fa8d-11e9-8c63-5eeaea83e57a.png" alt="Da-TACOS" width="150"/>
 
-We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com). All audio files are encoded in MP3 format and their sample rate is 44.1 kHz. 
+We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** (for benchmarking cover song identification systems) and **the cover analysis subset** (for analyzing the links among cover songs), with **pre-extracted features** and **metadata** for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com). All audio files we use to extract features are encoded in MP3 format and their sample rate is 44.1 kHz. 
 
 For organizing the data, we use the structure of SecondHandSongs where each song is called a **'performance'**, and each clique (cover group) is called a **'work'**. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_14`).
 
