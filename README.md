@@ -1,6 +1,6 @@
 # Da-TACOS
 
-We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com).
+We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** and **the cover analysis subset**, with pre-extracted features and metadata for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com). All audio files are encoded in MP3 format and their sample rate is 44.1 kHz. 
 
 For organizing the data, we use the structure of SecondHandSongs where each song is called a **'performance'**, and each clique (cover group) is called a **'work'**. Based on this, the file names of the songs are their unique performance IDs (PID, e.g. `P_22`), and their labels with respect to their cliques are their work IDs (WID, e.g. `W_14`).
 
@@ -14,11 +14,11 @@ Metadata for each song includes
 * SecondHandSongs.com work ID,  
 * whether the song is instrumental or not. 
 
-In addition, we matched the original metadata with MusicBrainz to obtain MusicBrainz ID (MBID), song length and genre/style tags. We would like to note that MusicBrainz related information is not available for all the songs in Da-TACOS.
+In addition, we matched the original metadata with MusicBrainz to obtain MusicBrainz ID (MBID), song length and genre/style tags. We would like to note that MusicBrainz related information is not available for all the songs in Da-TACOS, and since we used just our metadata for matching, we include all possible MBIDs for a particular songs.
 
-For facilitating **reproducibility** in cover song identification (CSI) research, we propose **two frameworks** for **feature extraction** and **benchmarking** in our supplementary repository: [acoss](https://github.com/furkanyesiler/acoss). **The feature extraction framework** is designed to help CSI researchers to find **the most commonly used features for CSI in a single address**. The parameter values we used to extract the features in Da-TACOS are shared in the same repository. Moreover, **the benchmarking framework** includes our implementations of **7 state-of-the-art CSI systems**. We provide the performance results of **an initial benchmarking** of those **7 systems** on the benchmark subset of Da-TACOS. We encourage other CSI researchers to contribute to the open source frameworks with implementing their favorite feature extraction algorithms and their CSI systems to build up a knowledge base where CSI research can reach larger audiences.
+For facilitating **reproducibility** in cover song identification (CSI) research, we propose **a framework for feature extraction and benchmarking** in our supplementary repository: [acoss](https://github.com/furkanyesiler/acoss). **The feature extraction component** is designed to help CSI researchers to find **the most commonly used features for CSI in a single address**. The parameter values we used to extract the features in Da-TACOS are shared in the same repository. Moreover, **the benchmarking component** includes our implementations of **7 state-of-the-art CSI systems**. We provide the performance results of **an initial benchmarking** of those **7 systems** on the benchmark subset of Da-TACOS. We encourage other CSI researchers to contribute to acoss with implementing their favorite feature extraction algorithms and their CSI systems to build up a knowledge base where CSI research can reach larger audiences. 
 
-The instructions for how to download and to use the dataset are shared below. Please contact us if you have any questions or requests.
+The instructions for how to download and use the dataset are shared below. Please contact us if you have any questions or requests.
 
 ## Structure
 
@@ -131,7 +131,7 @@ pip install -r requirements.txt
 
 ### Downloading the data
 
-The dataset is currently stored in only in Google Drive (it will be uploaded to Zenodo too), and can be downloaded from this [link](https://drive.google.com/open?id=1GfFF_Kan_Qe69MF15i3-_LqE4wn3XNsb). We also provide a python script that automatically downloads the folder you specify. Basic usage of this script can be seen below:
+The dataset is currently stored in only in Google Drive (it will be uploaded to Zenodo soon), and can be downloaded from this [link](https://drive.google.com/open?id=1GfFF_Kan_Qe69MF15i3-_LqE4wn3XNsb). We also provide a python script that automatically downloads the folders you specify. Basic usage of this script can be seen below:
 
 ```bash
 python download_da-tacos.py -h
@@ -150,7 +150,7 @@ Download script for Da-TACOS
 optional arguments:                                                                                                       
   -h, --help            show this help message and exit                                                                   
   --dataset {metadata,benchmark,coveranalysis,da-tacos}                                                                      
-                        which subsets to download. 'da-tacos' option downloads
+                        which subset to download. 'da-tacos' option downloads
                         both subsets. the options other than 'metadata' will
                         download the metadata as well. (default: metadata)                                                                     
   --type {single_files,cens,crema,hpcp,key,madmom,mfcc,tags} [{single_files,cens,crema,hpcp,key,madmom,mfcc,tags} ...]                                     
@@ -182,7 +182,7 @@ P_15_data = dd.io.load(file_path)
 
 ## Citing the dataset
 
-Please cite the following publication when using the dataset:
+Please cite the following [publication](http://archives.ismir.net/ismir2019/paper/000038.pdf) when using the dataset:
 
 > Furkan Yesiler, Chris Tralie, Albin Correya, Diego F. Silva, Philip Tovstogan, Emilia Gómez, and Xavier Serra. Da-TACOS: A Dataset for Cover Song Identification and Understanding. In 20th International Society for Music Information Retrieval Conference (ISMIR 2019), pages 327-334, Delft, The Netherlands, 2019.
 
@@ -208,6 +208,6 @@ Bibtex version:
 
 This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 765068 (MIP-Frontiers).
 
-This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 770376 (TROMPA).
+This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 770376 (TROMPA).
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" height="64" hspace="20">

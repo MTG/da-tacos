@@ -90,7 +90,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', 
                         default='metadata',
                         choices=['metadata', 'benchmark', 'coveranalysis', 'da-tacos'],
-                        help='which subsets to download. \'da-tacos\' option downloads both subsets. the options other '
+                        help='which subset to download. \'da-tacos\' option downloads both subsets. the options other '
                              'than \'metadata\' will download the metadata as well.')
     parser.add_argument('--type',
                         default='single_files',
