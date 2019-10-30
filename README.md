@@ -117,7 +117,6 @@ To facilitate the use of the dataset, we provide two options regarding the file 
 	"track_id": numpy.str_
 }
 
-
 ```
 
 ## Using the dataset
