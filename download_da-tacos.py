@@ -55,7 +55,7 @@ def download(dataset, data_type, source, output_dir, unpack_zips, remove_zips):
                 remove_zip(output)
         else:
             for feature in download_types:
-                print('Downloading {} folder for {}'.format(feature, subset))
+                print('Downloading {} folder for the {} subset'.format(feature, subset))
 
                 output = os.path.join(output_dir, download_paths[subset][feature]['filename'])
 
