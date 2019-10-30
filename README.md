@@ -205,7 +205,7 @@ Bibtex version:
 ## License
 
 * The code in this repository is licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) 
-* The metadata and the pre-extracted features are licensed under a [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+* The metadata and the pre-extracted features are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Acknowledgments
 
