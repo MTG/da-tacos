@@ -127,6 +127,8 @@ To facilitate the use of the dataset, we provide two options regarding the file 
 * Python 3.6+
 * Create virtual environment and install requirements
 ```bash
+git clone https://github.com/MTG/da-tacos.git
+cd da-tacos
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
