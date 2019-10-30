@@ -184,7 +184,7 @@ P_15_data = dd.io.load(file_path)
 
 Please cite the following [publication](http://archives.ismir.net/ismir2019/paper/000038.pdf) when using the dataset:
 
-> Furkan Yesiler, Chris Tralie, Albin Correya, Diego F. Silva, Philip Tovstogan, Emilia Gómez, and Xavier Serra. Da-TACOS: A Dataset for Cover Song Identification and Understanding. In 20th International Society for Music Information Retrieval Conference (ISMIR 2019), pages 327-334, Delft, The Netherlands, 2019.
+> Furkan Yesiler, Chris Tralie, Albin Correya, Diego F. Silva, Philip Tovstogan, Emilia Gómez, and Xavier Serra. Da-TACOS: A Dataset for Cover Song Identification and Understanding. In Proc. of the 20th Int. Soc. for Music Information Retrieval Conf. (ISMIR 2019), pages 327-334, Delft, The Netherlands, 2019.
 
 Bibtex version:
 
