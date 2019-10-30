@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/32430027/67803708-e7ee5600-fa8d-11e9-8c63-5eeaea83e57a.png" alt="Da-TACOS" width="150"/>
-</p>
+<img src="https://user-images.githubusercontent.com/32430027/67803708-e7ee5600-fa8d-11e9-8c63-5eeaea83e57a.png" alt="Da-TACOS" width="150"/>
 
 
 We present Da-TACOS: a dataset for cover song identification and understanding. It contains two subsets, namely **the benchmark subset** (for benchmarking cover song identification systems) and **the cover analysis subset** (for analyzing the links among cover songs), with **pre-extracted features** and **metadata** for **15,000** and **10,000 songs**, respectively. The annotations included in the metadata are obtained with the API of [SecondHandSongs.com](https://secondhandsongs.com). All audio files we use to extract features are encoded in MP3 format and their sample rate is 44.1 kHz. Da-TACOS does not contain any audio files. For **the results** of **our analyses on modifiable musical characteristics** using the cover analysis subset and **our initial benchmarking of 7 state-of-the-art cover song identification algorithms** on the benchmark subset, you can look at our [publication](http://archives.ismir.net/ismir2019/paper/000038.pdf).
