@@ -207,6 +207,8 @@ Bibtex version:
 * The code in this repository is licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) 
 * The metadata and the pre-extracted features are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+Copyright 2019 Music Technology Group
+
 ## Acknowledgments
 
 This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 765068 (MIP-Frontiers).
