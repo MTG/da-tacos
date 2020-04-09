@@ -18,7 +18,7 @@ def download(dataset, data_type, source, output_dir, unpack_zips, remove_zips):
         return
 
     if dataset == 'da-tacos':
-        download_sets = ['benchmark subset', 'cover analysis subset', 'metadata']
+        download_sets = ['benchmark', 'coveranalysis', 'metadata']
     else:
         if dataset != 'metadata':
             download_sets = [dataset, 'metadata']
